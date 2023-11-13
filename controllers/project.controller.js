@@ -44,6 +44,21 @@ export const createProject = async (req, res) => {
 
 // ...
 
+export const getProjectEpisodes = async (req, res) => {
+  try {
+    const projectId = req.params.project;
+    const episodes = await EPProject.find({ project: projectId }).populate(
+      "project"
+    );
+
+    return res.status(200).json({ status: "foos", data: episodes });
+  } catch (error) {
+    return res.status(500).json({ message: error.message, status: false });
+  }
+};
+
+// ...
+
 export const postProjectEpisode = async (req, res) => {
   try {
     const projectId = req.params.projectId;
