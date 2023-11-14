@@ -17,6 +17,6 @@ projectRouter.post("/createEpi/:projectId", postProjectEpisode);
 
 projectRouter.get("/episode/:projectId", getProjectEpisodes);
 
-projectRouter.delete("/episode/:projectId", deleteEp);
+projectRouter.delete("/episode/:EPprojectId", deleteEp);
 
 export default projectRouter;
