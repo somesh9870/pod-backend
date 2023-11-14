@@ -46,7 +46,7 @@ export const createProject = async (req, res) => {
 
 export const getProjectEpisodes = async (req, res) => {
   try {
-    const projectId = req.params.project;
+    const projectId = req.params.projectId;
     const episodes = await EPProject.find({ project: projectId }).populate(
       "project"
     );
