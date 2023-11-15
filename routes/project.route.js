@@ -5,6 +5,7 @@ import {
   getProjectEpisodes,
   getProjects,
   postProjectEpisode,
+  updateEd,
 } from "../controllers/project.controller.js";
 
 const projectRouter = express.Router();
@@ -18,5 +19,8 @@ projectRouter.post("/createEpi/:projectId", postProjectEpisode);
 projectRouter.get("/episode/:projectId", getProjectEpisodes);
 
 projectRouter.delete("/episode/:EPprojectId", deleteEp);
+
+projectRouter.patch("/episode/:EPprojectId", updateEd);
+
 
 export default projectRouter;
